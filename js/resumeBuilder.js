@@ -14,7 +14,22 @@ var bio = {
 
 };
 
+var work = {
+  "job" : "Manager",
+  "employer" : "Accenture",
+  "years" : 7,
+  "city" : "Hamburg",
+};
 
+work.job = "Senior Manager";
+
+var education = {
+  "school" : "",
+  "years" : 0,
+  "city" : "",
+};
+
+education["school"] = "WWU";
 
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -23,3 +38,4 @@ var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#main").append(bio.contact.email + bio.contact.phone + bio.picture + bio.welcome + bio.skills[0]);
+$("#main").append(work.job + education["school"]);
