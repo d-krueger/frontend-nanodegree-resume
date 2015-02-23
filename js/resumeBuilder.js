@@ -24,18 +24,37 @@ var work = {
 work.job = "Senior Manager";
 
 var education = {
-  "school" : "",
-  "years" : 0,
-  "city" : "",
+  "schools" : [{
+    "school" : "BBS",
+    "majors" : ["Math", "Controlling"],
+    "minors" : ["Business", "English"],
+    "years" : 3,
+    "city" : "Luenburg",
+    "online" : "linkBBS"
+  },
+  {
+    "school" : "WWU",
+    "majors" : ["Business", "Information Science"],
+    "minors" : ["Process", "Design"],
+    "years" : 4,
+    "city" : "Muenster",
+    "online" : "linkWWU"
+  }],
+  "onlineCourses" : [{
+      "title": "Java Script Basics",
+      "school": "Udacity",
+      "dates": 2015,
+      "url" : "udacityLink"
+  }]
 };
 
-education["school"] = "WWU";
+//education["school"] = "WWU";
 
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+//var formattedName = HTMLheaderName.replace("%data%", bio.name);
+//var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#main").append(bio.contact.email + bio.contact.phone + bio.picture + bio.welcome + bio.skills[0]);
-$("#main").append(work.job + education["school"]);
+//$("#header").prepend(formattedRole);
+//$("#header").prepend(formattedName);
+//$("#main").append(bio.contact.email + bio.contact.phone + bio.picture + bio.welcome + bio.skills[0]);
+//$("#main").append(work.job + education["school"]);
